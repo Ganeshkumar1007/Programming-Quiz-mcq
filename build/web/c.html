@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Quiz</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id ="hai">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu" id="toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" id = "heading">Quiz</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-right ">
+                <li><a href="#" class="mx-auto" ><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#" class="mx-auto"><i class="fa fa-info"></i>  About</a></li>
+                <li><a href="#" class="mx-auto"><i class="fa fa-phone"></i>  Contact</a></li>
+                <button class="btn btn-success navbar-btn"  id="sign" style="margin-left: 20px;">SignIn</button>
+
+
+
+            </ul>
+        </div> 
+        </div>
+       
+    </nav>
+    
+    <div class="container-fluid" style="margin: 50px;">
+        <div class="row"id = "head">
+            <div class="col-md-12" >
+                <h1>Quiz, Are you Ready???</h1>
+                <p>Lets,Crack it!!!</p>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 " id="pos">
+                    <div>
+                        <h1 id="question">Question:1</h1>
+                        <p id ="difficult">Difficulty Level : <u>Easy</u></p>
+                        <h3>Who invented C progamming ?</h3>
+                        <div id="hai">
+                            <span id="b">1</span> <button class="btn btn-lg "  id="option1" >Ganesh</button><br>
+                            <span id="b">2</span><button class="btn btn-lg " id="option2">Denis Richie</button><br>
+                            <span id="b">3</span><button class="btn btn-lg" id="option3">Ram</button><br>
+                            <span id="b">4</span><button class="btn btn-lg" id="option4">Suresh</button>
+                            
+                        </div>
+    
+                    </div>
+                    <div>
+                        <h1 id="question">Question:2</h1>
+                        <p id ="difficult">Difficulty Level : <u>Easy</u></p>
+                        <h3> All keywords in C are in ?</h3>
+                        <div id="hai">
+                            <span id="b">1</span> <button class="btn btn-lg "  id="option5" style="width: 250px;">LowerCase letters</button><br>
+                            <span id="b">2</span><button class="btn btn-lg " id="option6" style="width: 250px;">UpperCase letters</button><br>
+                            <span id="b">3</span><button class="btn btn-lg" id="option7" style="width: 250px;">CamelCase letters</button><br>
+                            <span id="b">4</span><button class="btn btn-lg" id="option8" style="width: 250px;">None of the mentioned</button>
+                            
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+        $(document).ready(function(){
+        $("#toggle").on("click",function(){
+            $("#head").css('margin-top','200px');
+        });
+        
+        $("#option1").on("click",function(){
+    var x = $("#option1").text();
+    if(x==="Denis Richie")
+    {
+        
+        $("#option1").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option1").css({"background-color": "red", "color": "white"});
+
+    }
+    document.getElementById("option2").disabled = true;
+    document.getElementById("option3").disabled = true;
+    document.getElementById("option4").disabled = true;
+
+    $(this).off("click");
+    
+    
+});
+$("#option2").on("click",function(){
+    var x = $("#option2").text();
+    if(x==="Denis Richie")
+    {
+        
+        $("#option2").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option2").css({"background-color": "red", "color": "white"});
+
+    }
+    $(this).off("click");
+
+    document.getElementById("option1").disabled = true;
+    document.getElementById("option3").disabled = true;
+    document.getElementById("option4").disabled = true;
+
+    
+});
+$("#option3").on("click",function(){
+    var x = $("#option3").text();
+    if(x==="Denis Richie")
+    {
+        console.log(x);
+        $("#option3").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option3").css({"background-color": "red", "color": "white"});
+
+    }
+    $(this).off("click");
+    document.getElementById("option1").disabled = true;
+    document.getElementById("option2").disabled = true;
+    document.getElementById("option4").disabled = true;
+
+    
+});
+$("#option4").on("click",function(){
+    var x = $("#option4").text();
+    if(x==="Denis Richie")
+    {
+        console.log(x);
+        $("#option4").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option4").css({"background-color": "red", "color": "white"});
+
+    }
+    $(this).off("click");
+
+    document.getElementById("option1").disabled = true;
+    document.getElementById("option2").disabled = true;
+    document.getElementById("option3").disabled = true;
+
+});
+
+
+$("#option5").on("click",function(){
+    var x = $("#option5").text();
+    if(x==="LowerCase letters")
+    {
+        
+        $("#option5").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option5").css({"background-color": "red", "color": "white"});
+
+    }
+    $(this).off("click");
+
+    document.getElementById("option6").disabled = true;
+    document.getElementById("option7").disabled = true;
+    document.getElementById("option8").disabled = true;
+
+    
+});
+$("#option6").on("click",function(){
+    var x = $("#option6").text();
+    if(x==="LowerCase letters")
+    {
+        console.log(x);
+        $("#option6").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option6").css({"background-color": "red", "color": "white"});
+
+    }
+    $(this).off("click");
+    document.getElementById("option5").disabled = true;
+    document.getElementById("option7").disabled = true;
+    document.getElementById("option8").disabled = true;
+
+    
+});
+$("#option7").on("click",function(){
+    var x = $("#option7").text();
+    if(x==="LowerCase letters")
+    {
+        console.log(x);
+        $("#option7").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option7").css({"background-color": "red", "color": "white"});
+
+    }
+    $(this).off("click");
+
+    document.getElementById("option5").disabled = true;
+    document.getElementById("option6").disabled = true;
+    document.getElementById("option8").disabled = true;
+
+});
+$("#option8").on("click",function(){
+    var x = $("#option8").text();
+    if(x==="LowerCase letters")
+    {
+        console.log(x);
+        $("#option8").css({"background-color": "Green", "color": "white"});
+    }
+    else{
+        $("#option8").css({"background-color": "red", "color": "white"});
+
+    }
+    $(this).off("click");
+
+    document.getElementById("option5").disabled = true;
+    document.getElementById("option6").disabled = true;
+    document.getElementById("option7").disabled = true;
+
+});
+   
+    
+        
+        
+       
+    });
+</script>
+</html>

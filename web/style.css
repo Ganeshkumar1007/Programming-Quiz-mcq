@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+*{
+    
+    margin:0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    
+}
+.navbar{
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+#heading{
+    font-size: 40px;
+    font-weight: 800;
+    color: orange;
+}
+.mx-auto:hover{
+    color: orange !important;
+    border-bottom: 2px solid white;
+}
+#sign{
+    border-radius: 25px;
+}
+#exam{
+    font-size: 50px;
+    font-weight: 900;
+    
+    color: orange;
+}
+#cards img{
+    width: 230px;
+    height: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    padding-right: 20px;
+    border: none !important;
+   
+}
+.card{
+    width: 250px;
+    height: 300px;
+    border: none !important;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3),
+                inset 4px 4px 10px white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center; 
+    background: #efefef;
+    
+    margin-left:  2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#cards h3{
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+    
+}
+.card:hover{
+    box-shadow: 25px 30px 30px rgba(0, 0, 0, 0.3),
+                inset 8px 8px 20px black;
+    
+    transform: 0.15s;
+
+}
+#title{
+    margin-left: 20px;
+}
+#question{
+    font-size: 25px;
+    font-weight: 800;
+}
+#pos{
+   padding-left: 50px;
+}
+#option1,#option2, #option3,#option4{
+    margin: 5px 0px;
+    width: 170px;
+    text-align: center;
+}
+#option5,#option6, #option7,#option8{
+    margin: 5px 0px;
+    
+    text-align: center;
+}
+#b{
+    width: 100px ;
+    height: 23%;
+   
+    border-radius: 5px;
+    padding: 5px;
+     margin-right: 5px;
+    text-align: center;
+    background-color: black;
+    color: #efefef;
+}
